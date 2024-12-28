@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2566">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">/* Corps de la page */</p>
+<p class="p1">body {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>overflow: hidden; /* Empêche tout scroll */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 100vh; /* Hauteur totale de l'écran */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background-color: #f9f9f9; /* Couleur de fond */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>top: 0; /* S'assurer qu'il n'y ait pas d'espace supplémentaire */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Header */</p>
+<p class="p1">header {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>top: 10px; /* Marges en haut */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>left: 10px; /* Marges à gauche */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: none; /* Pas de fond pour laisser les images visibles en dessous */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0; /* Pas de padding interne */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>z-index: 1000; /* Toujours au-dessus du contenu */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family: 'Helvetica Neue', Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 9pt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight: normal;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: #333; /* Couleur sobre */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align: left;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Conteneur principal du carrousel */</p>
+<p class="p1">.carousel-container {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: absolute; /* Position absolue pour éliminer tout espace */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>top: 0; /* Enlever tout espace en haut */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>left: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transform: translateX(-50%); /* Centrer horizontalement */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 80vw; /* Largeur 80% de l'écran pour avoir une marge sur les côtés */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 80vh; /* Hauteur 80% de l'écran pour ne pas occuper toute la hauteur */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0; /* Enlever les marges */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0; /* Enlever les paddings */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>aspect-ratio: 4 / 5; /* Ratio global 4:5 */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer; /* Le curseur change pour indiquer que c'est cliquable */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Contenu du carrousel */</p>
+<p class="p1">.carousel-content {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition: transform 0.5s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 100%; /* Prendre toute la hauteur disponible */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%; /* Prendre toute la largeur disponible */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap: 10px; /* Gouttières entre les images */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Projet */</p>
+<p class="p1">.project {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 100%; /* Prendre toute la hauteur disponible */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Grille de 9 images */</p>
+<p class="p1">.carousel-container .grid {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>grid-template-columns: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>grid-template-rows: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap: 10px; /* Gouttières entre les images */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 100%;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Grille de 4 images */</p>
+<p class="p1">.carousel-container .grid-4 {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>grid-template-columns: repeat(2, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>grid-template-rows: repeat(2, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap: 10px; /* Gouttières entre les images */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 100%;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Image pleine écran - Homothétique avec ratio 4:5 */</p>
+<p class="p1">.carousel-image.full-screen {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>object-fit: contain; /* Garde le ratio 4:5 sans déformation de l'image */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0 auto;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Images dans les projets */</p>
+<p class="p1">.carousel-image {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>object-fit: contain; /* Maintient le ratio 4:5 */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>aspect-ratio: 4 / 5; /* Maintient le ratio 4:5 */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 0; /* Enlever les bordures arrondies des images */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Légende sous chaque projet */</p>
+<p class="p1">.legend {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>letter-spacing: 1px;</p>
+<p class="p1">}</p>
+</body>
+</html>
